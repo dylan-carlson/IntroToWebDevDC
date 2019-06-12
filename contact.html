@@ -1,12 +1,22 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <!--
     Name: Dylan Carlson 
     Date Created: June 5, 2019 
-    Most recent revision: June 6, 2019
+    Most recent revision: June 11, 2019
 -->
 <html lang="en"> 
     <head> 
-        <title>Contact Us</title>	
+        <title>Contact Us</title>
+        <link rel="stylesheet" type="text/css" href="styles/restaurantStyles.css">
+        <style type="text/css">
+            .required {
+                font-weight: bold;
+            }
+
+            input {
+                margin: 5px 0px;
+            }
+        </style>
     </head> 
     
     <body>
@@ -15,24 +25,23 @@
         </header>
 
         <nav>
-            <hr />
             <p><a href="index.html">Home</a></p>
             <p><a href="menu.html">Menu</a></p>
             <p><a href="contact.html">Contact Us</a></p>
-            <hr />
+            <div class="clear-float"></div>
         </nav>
 
         <form action="submit.html" method="POST">
-            <label for="name">Name:</label><br />
+            <label for="name" class="required">Name:</label><br />
             <input type="text" id="name" name="name"><br />
 
-            <label for="email">Email:</label><br />
+            <label for="email" class="required">Email:</label><br />
             <input type="text" id="email" name="email"><br />
 
-            <label for="phone">Phone:</label><br />
+            <label for="phone" class="required">Phone:</label><br />
             <input type="text" id="phone" name="phone"><br />
 
-            <label for="reason">Reason for Inquiry:</label>
+            <label for="reason" class="required">Reason for Inquiry:</label>
             <select id="reason" name="reason">
                 <option value="catering" selected="selected">Catering</option>
                 <option value="private-party">Private Party</option>
@@ -50,7 +59,7 @@
             <label for="choice2">Yes</label><br />
 
             
-            <label for="contact">Best days to contact you:</label>
+            <label for="contact" class="required">Best days to contact you:</label>
             <input type="checkbox" id="monday" name="contact" value="monday">
             <label for="monday">M</label>
             <input type="checkbox" id="tuesday" name="contact" value="tuesday">
@@ -66,7 +75,6 @@
         </form>
 
         <footer>
-            <hr />
             <p>123 Main Street, Portland, OR 97222</p>
             <p>(888) 555-1212</p>
         </footer>
